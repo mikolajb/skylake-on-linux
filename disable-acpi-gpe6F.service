@@ -1,0 +1,9 @@
+[Unit]
+Description=Disable gpe6F
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/bash -c '/usr/bin/echo "disable" > /sys/firmware/acpi/interrupts/gpe6F'
+
+[Install]
+WantedBy=basic.target
